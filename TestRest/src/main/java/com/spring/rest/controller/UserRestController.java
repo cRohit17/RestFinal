@@ -29,7 +29,7 @@ public class UserRestController
 	public String addUser(@RequestBody UserBean userBean)
 	{
 		this.userService.addUser(userBean);
-		return userBean.getUserName()+"user added suceesfully..";
+		return userBean.getUserName()+" user added suceesfully..";
 	
 	}
 	@RequestMapping(value="/{id}",method=RequestMethod.PUT)
@@ -37,12 +37,20 @@ public class UserRestController
 		this.userService.updateUser(userBean);
 		return userService.getAllUser();
 	}
+	
+	@RequestMapping(value="/{id}",method=RequestMethod.GET)
+	public UserBean getUser(@PathVariable("id") int id)
+	{
+		return this.userService.getUser(id);
+		
+	}
 
 	@RequestMapping(value="/get",method=RequestMethod.GET)
 	public List<UserBean> listUsers(){
 		return this.userService.getAllUser();
 		
 	}
+	
 
 	@RequestMapping(value="/{userId}", method = RequestMethod.DELETE)
     public String removeUser(@PathVariable("userId") int userId){

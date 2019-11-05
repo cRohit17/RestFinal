@@ -82,7 +82,6 @@ public class UserDaoImpl implements UserDao
 		}
 		return null;
 	}
-
 	@Override
 	public List<UserEntity> fetchAllUser() {
 		Session session=null;
@@ -96,9 +95,11 @@ public class UserDaoImpl implements UserDao
 		}
 		return null;
 	}
+	
 
 	@Override
-	public List<UserEntity> removeUser(int userId) {
+	public List<UserEntity> removeUser(int userId)
+	{
 		Session session=null;
 		Transaction tr=null;
 		UserEntity userDb=fetchUser(userId);

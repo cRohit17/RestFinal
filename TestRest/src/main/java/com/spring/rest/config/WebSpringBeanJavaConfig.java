@@ -53,7 +53,7 @@ public class WebSpringBeanJavaConfig {
 	public Properties hibernateProperties() {
 		Properties properties = new Properties();
 		properties.put(hbmDialectProperty, "org.hibernate.dialect.MySQL5Dialect");
-		properties.put(hbmDdlAutoProperty, "create");
+		properties.put(hbmDdlAutoProperty, "update");
 		properties.put(hbmShowSqlProperty, "true");
 		properties.put(hbmFormatSqlProperty, "true");
 		return properties;

@@ -11,8 +11,9 @@ public class UserEntity
 	@Id
 	private int userId;
 	private String userName;
-	private int mobile;
+	private String mobile;
 	private String email;
+	
 	public int getUserId() {
 		return userId;
 	}
@@ -25,10 +26,10 @@ public class UserEntity
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-	public int getMobile() {
+	public String getMobile() {
 		return mobile;
 	}
-	public void setMobile(int mobile) {
+	public void setMobile(String mobile) {
 		this.mobile = mobile;
 	}
 	public String getEmail() {
@@ -42,7 +43,7 @@ public class UserEntity
 		return "UserEntity [userId=" + userId + ", userName=" + userName + ", mobile=" + mobile + ", email=" + email
 				+ "]";
 	}
-	public UserEntity(int userId, String userName, int mobile, String email) {
+	public UserEntity(int userId, String userName, String mobile, String email) {
 		super();
 		this.userId = userId;
 		this.userName = userName;
@@ -54,6 +55,6 @@ public class UserEntity
 		// TODO Auto-generated constructor stub
 	}
 	
-	
+		
 
 }
