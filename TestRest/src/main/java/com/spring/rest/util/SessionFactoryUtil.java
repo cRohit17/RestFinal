@@ -9,6 +9,8 @@ public class SessionFactoryUtil
 	// My comment 3 here.
 	// My comment 2 here.
 	// My comment 4 here.
+		// My comment 5 here.
+	
 	public static void closeResources(Session session,Transaction tr){
 		try{
 			if(session!=null){
