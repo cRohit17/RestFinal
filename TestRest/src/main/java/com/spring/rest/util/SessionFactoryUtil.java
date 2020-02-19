@@ -5,7 +5,7 @@ import org.hibernate.Transaction;
 
 public class SessionFactoryUtil 
 {
-
+	// My comment 1 here.
 	public static void closeResources(Session session,Transaction tr){
 		try{
 			if(session!=null){
